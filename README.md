@@ -1,1 +1,1 @@
-# movie-search-2
+## TMDB API를 활용한 영화 검색 사이트

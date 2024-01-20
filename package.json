@@ -1,0 +1,23 @@
+{
+  "name": "movie-search",
+  "version": "1.0.0",
+  "description": "TMDB API를 활용하여 영화 검색 사이트 만들기",
+  "scripts": {
+    "dev": "parcel ./index.html --open chrome",
+    "build": "parcel build ./index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.7"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
