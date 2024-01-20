@@ -30,14 +30,13 @@ export default class Header extends Component {
     // a 태그를 활용하여 #/으로 이동이 가능하도록 구성, nav 태그 안에 ul 태그를 활용
     this.el.innerHTML = /* html */ `
       <div class="inner">
-        <div>
+        <div class="logo">
           <a 
-            href="#/" 
-            class="logo">
+            href="#/">
             <span>J'S CINE</span>BOX
           </a>
         </div>
-        <nav>
+        <div class="gnb">
           <ul>
             ${this.state.menus
               .map((menu) => {
@@ -59,7 +58,7 @@ export default class Header extends Component {
               // ul의 모든 요소를 연결해 하나의 문자열로 연결
               .join('')}
           </ul>
-        </nav>
+        </div>
       </div>
     `;
   }
