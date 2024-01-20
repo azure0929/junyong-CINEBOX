@@ -13,8 +13,16 @@ export default class Search extends Component {
       <a href="#/search"><button class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button></a>
     `;
     const inputEl = this.el.querySelector('input');
+
     inputEl.addEventListener('input', () => {
       movieStore.state.searchText = inputEl.value;
+    });
+
+    inputEl.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        searchMovies(1);
+        searchMovies(2);
+      }
     });
 
     // btn 클릭시 검색 결과가 나오도록 설정
