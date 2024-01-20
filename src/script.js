@@ -6,7 +6,6 @@ info.append(new App().el);
 
 router();
 
-// toTop 클릭 시 상단으로 이동
 const toTopEl = document.querySelector('.to-top');
 
 toTopEl.onclick = () => {

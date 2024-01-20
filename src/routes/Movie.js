@@ -5,7 +5,6 @@ import { Component } from '../core/assets';
 export default class Movie extends Component {
   async render() {
     this.el.classList.add('the-movie');
-    // 영화 상세 정보 부분이 출력되기 전 Skeleton Loading을 위한 클래스명을 skeleton으로 설정
     this.el.innerHTML = /* html */ `
       <div class="poster skeleton"></div>
       <div class="specs">
@@ -15,13 +14,12 @@ export default class Movie extends Component {
         <ul class="movieinfo skeleton"></ul>
       </div>
     `;
-    // 영화 상세 GET
     await getMovieDetails(history.state.id);
     const { movie } = movieStore.state;
-    // replace라는 메서드를 활용하여 SX1000으로 이미지 리사이징
     const bigPoster = movie.Poster.replace('SX300', 'SX1000');
 
     this.el.innerHTML = /* html */ `
+      <a class="prev" href="#/search"><i class="fa-solid fa-xmark"></i></a>
       <div
         style="background-image: url(${bigPoster});"
         class="poster">
