@@ -1,10 +1,8 @@
-import Home from './Home';
-import Movie from './Movie';
-import Search from './SearchPage';
-import { createRouter } from '../core/assets';
+import Home from "./Home";
+import Search from "./SearchPage";
+import { createRouter } from "../core/core";
 
 export default createRouter([
-  { path: '#/', component: Home },
-  { path: '#/search', component: Search },
-  { path: '#/movie', component: Movie }
+  { path: "#/", component: Home },
+  { path: "#/search", component: Search },
 ]);

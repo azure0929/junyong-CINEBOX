@@ -1,24 +1,26 @@
-import movieStore, { searchMovies } from '../store/movie';
+import movieStore, { searchMovies } from "../store/movie";
 
-import { Component } from '../core/assets';
+import { Component } from "../core/core";
 
 export default class MovieItemsMore extends Component {
   constructor() {
     super({
-      tagName: 'button'
+      tagName: "button",
     });
-    movieStore.subscribe('pageMax', () => {
+    movieStore.subscribe("pageMax", () => {
       const { page, pageMax } = movieStore.state;
-      pageMax > page ? this.el.classList.remove('hide') : this.el.classList.add('hide');
+      pageMax > page
+        ? this.el.classList.remove("hide")
+        : this.el.classList.add("hide");
     });
   }
   render() {
     // more btn Element를 클릭 시 검색 결과가 더 나오도록 설정
-    this.el.classList.add('btn', 'more', 'hide');
-    this.el.textContent = 'More';
+    this.el.classList.add("btn", "more", "hide");
+    this.el.textContent = "More";
 
-    this.el.addEventListener('click', async () => {
-      this.el.classList.add('hide');
+    this.el.addEventListener("click", async () => {
+      this.el.classList.add("hide");
       await searchMovies(movieStore.state.page + 1);
     });
   }
