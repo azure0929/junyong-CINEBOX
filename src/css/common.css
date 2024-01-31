@@ -69,38 +69,6 @@ img {
   }
 }
 
-/* Skeleton Loading Animation */
-.skeleton {
-  position: relative;
-  border-radius: 12px;
-  background-color: #171717;
-  overflow: hidden;
-}
-.skeleton::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
-  transform: translateX(-100%);
-  animation: skeleton-loader 2s infinite;
-}
-@keyframes skeleton-loader {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
 /* SearchPage */
 .searchpage {
   width: 1200px;
