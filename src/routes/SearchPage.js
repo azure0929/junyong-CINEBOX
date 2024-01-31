@@ -3,7 +3,7 @@ import MovieList from "../components/MovieList";
 import ObserverEl from "../components/ObserverEl";
 import Search from "../components/Search";
 
-export default class Home extends Component {
+export default class SearchPage extends Component {
   render() {
     const movieItems = new MovieList().el;
     const search = new Search().el;

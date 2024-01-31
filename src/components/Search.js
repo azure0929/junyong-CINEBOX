@@ -8,7 +8,7 @@ export default class Search extends Component {
 
     this.el.innerHTML = /*HTML*/ `
       <div class="search-wrap">
-        <input value="" placeholder="Enter the movie title" />
+        <input value="" placeholder="ex) avengers" />
         <select id='year'>
           <option>All Year</option>
         </select>
