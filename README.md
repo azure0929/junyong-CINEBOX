@@ -166,3 +166,15 @@ function renderMovieCards(movies, listId) {
   renderMovieCards(pixarMovies, "pixarMovies");
 })();
 ```
+
+<br>
+
+- 대체 이미지 적용 (onerror 사용)
+
+```html
+<img
+  src="${movie.Poster}"
+  onerror="this.src='https://fl-1.cdn.flockler.com/embed/no-image.svg'"
+  alt="noimage"
+/>
+```
